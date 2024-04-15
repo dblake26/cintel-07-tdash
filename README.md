@@ -1,5 +1,32 @@
-# PyShiny Basic Dashboard (Penguins)
+# Project 7: Issues and Improvements
+Desiree Blake
 
+# PyShiny Express: Palmer Penguins Dashboard
+
+- Repository: [pyshiny-penguins-dashboard-express](https://github.com/denisecase/pyshiny-penguins-dashboard-express)
+- Live App: [Penguins Dashboard (Express)](https://denisecase.github.io/pyshiny-penguins-dashboard-express/)
+
+Run and publish interactive apps using PyShiny Express and GitHub Pages.
+
+This is a teaching version of the app written for clarity and understanding.
+To contribute, please fork the repository and submit a pull request.
+
+## Data Description
+
+This app uses the Palmer Penguins dataset which includes three penguin species observed on three islands in the Palmer Archipelago, Antarctica.
+The data has been made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
+
+Column names for the penguins dataset include:
+
+- species: penguin species (Chinstrap, Adelie, or Gentoo)
+- island: island name (Dream, Torgersen, or Biscoe) in the Palmer Archipelago
+- bill_length_mm: length of the bill in millimeters
+- bill_depth_mm: depth of the bill in millimeters
+- flipper_length_mm: length of the flipper in millimeters
+- body_mass_g: body mass in grams
+- sex: MALE or FEMALE
+
+See: <https://allisonhorst.github.io/palmerpenguins/>
 ## Tools
 
 - Python
@@ -20,6 +47,15 @@ Go to Dashboards / Basic Dashboard.
 For more detailed instructions, see <https://github.com/denisecase/pyshiny-penguins-dashboard-express>.
 That project README.md has more detailed instructions, including reminders for Mac and Linux. 
 
+## Prerequisites
+
+Before you start, have the following installed:
+
+- **Python**: Install the most recent version from [python.org](https://www.python.org/downloads/).
+- **Git**: Download and install Git from [git-scm.com](https://git-scm.com/downloads).
+- **Visual Studio Code (VS Code)**: Download from [code.visualstudio.com](https://code.visualstudio.com/).
+- **VS Code Extensions**: Install the Python extension and the Shiny extension in VS Code.
+
 ## Get the Code
 
 Fork this project into your own GitHub account.
@@ -30,6 +66,16 @@ IMPORTANT: Use your GitHub **username** in place of denisecase.
 ```shell
 git clone https://github.com/denisecase/cintel-07-tdash
 ```
+
+### Configurations
+
+- **Configure Git**: Set up your user name and email with Git using the following commands in your terminal.
+Change the values to your name and email address. This is a one-time setup.
+
+  ```shell
+  git config --global user.name "Your Name"
+  git config --global user.email "youremail@example.com"
+  ```
 
 ## Run Locally - Initial Start
 
