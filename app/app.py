@@ -1,3 +1,4 @@
+# Imports needed 
 import seaborn as sns
 from faicons import icon_svg
 
@@ -5,11 +6,15 @@ from shiny import reactive
 from shiny.express import input, render, ui
 import palmerpenguins 
 
+# Load data frame
 df = palmerpenguins.load_penguins()
 
-ui.page_opts(title="Penguins dashboard", fillable=True)
+
+# Define page options & name the page
+ui.page_opts(title="Desiree's Penguins dashboard", fillable=True)
 
 
+# Define sidebar
 with ui.sidebar(title="Filter controls"):
     ui.input_slider("mass", "Mass", 2000, 6000, 6000)
     ui.input_checkbox_group(
@@ -22,17 +27,17 @@ with ui.sidebar(title="Filter controls"):
     ui.h6("Links")
     ui.a(
         "GitHub Source",
-        href="https://github.com/denisecase/cintel-07-tdash",
+        href="https://github.com/dblake26/cintel-07-tdash",
         target="_blank",
     )
     ui.a(
         "GitHub App",
-        href="https://denisecase.github.io/cintel-07-tdash/",
+        href="https://dblake26.github.io/cintel-07-tdash/",
         target="_blank",
     )
     ui.a(
         "GitHub Issues",
-        href="https://github.com/denisecase/cintel-07-tdash/issues",
+        href="https://github.com/dblake26/cintel-07-tdash/issues",
         target="_blank",
     )
     ui.a("PyShiny", href="https://shiny.posit.co/py/", target="_blank")
@@ -47,7 +52,7 @@ with ui.sidebar(title="Filter controls"):
         target="_blank",
     )
 
-
+# Define main section with ui cards, value boxes, and grids/charts
 with ui.layout_column_wrap(fill=False):
     with ui.value_box(showcase=icon_svg("earlybirds")):
         "Number of penguins"
@@ -101,7 +106,7 @@ with ui.layout_columns():
 
 #ui.include_css(app_dir / "styles.css")
 
-
+# Define reactive calc to filter the penguins dataset
 @reactive.calc
 def filtered_df():
     filt_df = df[df["species"].isin(input.species())]
