@@ -1,21 +1,21 @@
 # Imports needed 
 import seaborn as sns
 from faicons import icon_svg
-
 from shiny import reactive
 from shiny.express import input, render, ui
-import palmerpenguins 
+import palmerpenguins
+import shinyswatch 
 
 # Load data frame
 df = palmerpenguins.load_penguins()
 
-<<<<<<< HEAD
 
 # Define page options & name the page
-=======
->>>>>>> c8358f4da37fe847d8d6d5dfc302fa58e4034d9e
 ui.page_opts(title="Desiree's Penguins dashboard", fillable=True)
 
+
+# Theme 
+shinyswatch.theme.sandstone()
 
 # Define sidebar
 with ui.sidebar(title="Filter controls"):
@@ -30,11 +30,7 @@ with ui.sidebar(title="Filter controls"):
     ui.h6("Links")
     ui.a(
         "GitHub Source",
-<<<<<<< HEAD
         href="https://github.com/dblake26/cintel-07-tdash",
-=======
-        href=https://github.com/dblake26/cintel-07-tdash",
->>>>>>> c8358f4da37fe847d8d6d5dfc302fa58e4034d9e
         target="_blank",
     )
     ui.a(
@@ -61,21 +57,21 @@ with ui.sidebar(title="Filter controls"):
 
 # Define main section with ui cards, value boxes, and grids/charts
 with ui.layout_column_wrap(fill=False):
-    with ui.value_box(showcase=icon_svg("earlybirds")):
+    with ui.value_box(showcase=icon_svg("earlybirds"), theme="white"):
         "Number of penguins"
 
         @render.text
         def count():
             return filtered_df().shape[0]
 
-    with ui.value_box(showcase=icon_svg("ruler-horizontal")):
+    with ui.value_box(showcase=icon_svg("ruler-horizontal"), theme="white"):
         "Average bill length"
 
         @render.text
         def bill_length():
             return f"{filtered_df()['bill_length_mm'].mean():.1f} mm"
 
-    with ui.value_box(showcase=icon_svg("ruler-vertical")):
+    with ui.value_box(showcase=icon_svg("ruler-vertical"), theme="white"):
         "Average bill depth"
 
         @render.text
