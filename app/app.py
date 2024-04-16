@@ -9,8 +9,11 @@ import palmerpenguins
 # Load data frame
 df = palmerpenguins.load_penguins()
 
+<<<<<<< HEAD
 
 # Define page options & name the page
+=======
+>>>>>>> c8358f4da37fe847d8d6d5dfc302fa58e4034d9e
 ui.page_opts(title="Desiree's Penguins dashboard", fillable=True)
 
 
@@ -27,7 +30,11 @@ with ui.sidebar(title="Filter controls"):
     ui.h6("Links")
     ui.a(
         "GitHub Source",
+<<<<<<< HEAD
         href="https://github.com/dblake26/cintel-07-tdash",
+=======
+        href=https://github.com/dblake26/cintel-07-tdash",
+>>>>>>> c8358f4da37fe847d8d6d5dfc302fa58e4034d9e
         target="_blank",
     )
     ui.a(
